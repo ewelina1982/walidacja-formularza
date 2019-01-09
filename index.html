@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, maximum-scale=1, minmum-scale=1, user-scalable=0">
+    <title>Formularz kontaktowy</title>
+    <link rel="Stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Duru+Sans&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<div class="header">
+    <h1>NAPISZ DO NAS</h1>
+    <form method="post" name="myForm" class="clear" id="myForm">
+        <div class="name">
+            <label for="name">Imię: *</label>
+            <input type="text" placeholder="wpisz imię" class="clear" name="name" id="name" value=""/>
+            <div class="hide">Pole jest puste lub nie poprawne imię</div>
+        </div>
+        <div class="surname">
+            <label for="surname">Nazwisko:</label>
+            <input type="text" placeholder="wpisz nazwisko" class="clear" name="surname" id="surname" value=""/>
+        </div>
+        <div class="email">
+            <label for="email">Adres e-mail: *</label>
+            <input type="email" placeholder="podaj e-mail" class="clear" name="email" id="email" value=""/>
+            <div class="hideEmail">Pole jest puste lub nie poprawny e-mail</div>
+        </div>
+        <div class="story">
+            <label for="story">Napisz do nas: *</label>
+            <textarea placeholder="napisz do nas" maxlength="2000" class="clear" name="story" id="story" rows="5"
+                      cols="33"></textarea>
+            <div class="hideStory">Pole jest puste</div>
+        </div>
+        <p>* Pole obowiązkowe</p>
+        <div class="g-recaptcha" data-sitekey="6LcehIcUAAAAAKAGh1RiMIIsj7jsE6N_MH5uBLR2"></div>
+        <button type="submit" name="send" class="btn sendBtn">Wyślij</button>
+        <button type="text" class="btn clearBtn">Wyczyść</button>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
